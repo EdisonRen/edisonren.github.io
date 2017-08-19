@@ -1,13 +1,9 @@
-let WIDTH = 35;
-let HEIGHT = 21;
-
-let STEP = 15;
+let STEP = 10;
 let GAME_OVER = false;
 
 // --------------------------------------------------------------------------
 drawBoard = function(maze) {
   maze.generateMaze();
-  maze.showboard();
 
   ctx.beginPath();
   ctx.fillStyle = 'black';
@@ -65,12 +61,18 @@ document.addEventListener('keydown', (evt) => {
 });
 
 // --------------------------------------------------------------------------
-let maze = new Maze(WIDTH, HEIGHT); // create a maze
 let canvas = document.getElementById("canvas"); // init canvas
 let ctx = canvas.getContext('2d');
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+let WIDTH = 35;
+let HEIGHT = 21;
 
 let x = 1;
 let y = 1;
 
+let maze = new Maze(WIDTH, HEIGHT); // create a maze
 drawBoard(maze);
 draw();
