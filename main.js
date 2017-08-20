@@ -64,9 +64,6 @@ document.addEventListener('keydown', (evt) => {
 let canvas = document.getElementById("canvas"); // init canvas
 let ctx = canvas.getContext('2d');
 
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-
 let WIDTH = 35;
 let HEIGHT = 21;
 
